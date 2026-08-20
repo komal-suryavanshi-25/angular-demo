@@ -1,4 +1,4 @@
 <p>parent works!</p>
 <div class="child">
-    <app-child [nameChild]="name"></app-child>
+    <app-child [nameChild]="name" [userChild]="user" (sentToParent)="getchild($event)"></app-child>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -9,4 +9,14 @@ import { Component, Input } from '@angular/core';
 export class Child {
 
   @Input() nameChild='';
+  @Input() userChild : any = 
+  {
+    
+
+  }
+  @Output() sentToParent = new EventEmitter();
+  send()
+  {
+    this.sentToParent.emit('ROKO');
+  }
 }

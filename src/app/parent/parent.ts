@@ -10,4 +10,17 @@ import { Child } from '../child/child';
 export class Parent {
 
   name = 'komal';
+  user = 
+  {
+    name : "Roko",
+    emailId : "Roko@gamial.com"
+
+  }
+  getchild(event:string)
+  {
+    console.log(event);
+
+  }
 }
+
+
