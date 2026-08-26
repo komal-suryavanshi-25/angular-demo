@@ -1,0 +1,7 @@
+<div>
+  @for (user of userlist; track user) {
+    <app-user-details [userListChild]="user" (userdetails)="get($event)"></app-user-details>
+  }
+</div>
+
+
