@@ -1,0 +1,22 @@
+<p>login-form works!</p>
+<form  [formGroup]="loginForm">
+<input type="text" formControlName="email"  placeholder="Email"/>
+@if(loginForm.controls.email.hasError('required'))
+{
+    <span>This Field is required</span>
+
+}
+<input type="text" formControlName="password" placeholder="Password"/>
+@if(loginForm.controls.password.hasError('required'))
+{
+    <span>This Field is required</span>
+
+}
+@if(loginForm.controls.password.hasError('minlength'))
+{
+    <span>Password Should be of min length six</span>
+
+}
+
+<button (click)="submit()" [disabled]="!loginForm.valid">Submit</button>
+</form>
