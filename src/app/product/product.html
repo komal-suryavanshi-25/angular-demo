@@ -1,0 +1,22 @@
+<p>product works!</p>
+
+
+    @for(product of productList;track product)
+    {
+        <div class="product">
+            <div>
+                {{product.id}}
+            </div>
+            <div>
+                {{product.name}}
+            </div>
+            <div>
+                {{product.price}}
+            </div>
+            <div>
+                {{product.quantity}}
+            </div>
+            
+        </div>
+
+    }
