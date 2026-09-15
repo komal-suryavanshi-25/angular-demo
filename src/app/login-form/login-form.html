@@ -1,4 +1,4 @@
-<p>login-form works!</p>
+<!-- <p>login-form works!</p>
 <form  [formGroup]="loginForm">
 <input type="text" formControlName="email"  placeholder="Email"/>
 @if(loginForm.controls.email.hasError('required'))
@@ -19,4 +19,12 @@
 }
 
 <button (click)="submit()" [disabled]="!loginForm.valid">Submit</button>
-</form>
+</form> -->
+
+
+@for(user of users; track user)
+{
+    <h1>{{user.firstName | uppercase}}</h1>
+    <h1>{{user.lastName | uppercase}}</h1>
+
+}

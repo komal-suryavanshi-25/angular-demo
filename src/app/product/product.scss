@@ -1,0 +1,14 @@
+.product{
+ display: flex;
+ gap: 1rem;
+ background-color: beige;
+ padding: 1rem;
+}
+.prouct-form{
+    display: flex;
+    flex-direction: row;
+
+}
+.prouct-form input{
+    flex: 1;
+}
