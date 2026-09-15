@@ -1,22 +1,29 @@
 <p>product works!</p>
 
+<form [formGroup]="productForm">
+  <div class="prouct-form">
+    <input class="" type="number" placeholder="Enter a id" formControlName="id" />
+    <input class="" type="text" placeholder="Enter a Name" formControlName="name" />
+    <input class="" type="number" placeholder="Enter a price" formControlName="price" />
+    <input class="" type="number" placeholder="Enter a quantity" formControlName="quantity" />
 
-    @for(product of productList;track product)
-    {
-        <div class="product">
-            <div>
-                {{product.id}}
-            </div>
-            <div>
-                {{product.name}}
-            </div>
-            <div>
-                {{product.price}}
-            </div>
-            <div>
-                {{product.quantity}}
-            </div>
-            
-        </div>
+    <button (click)="onSubmit()" [disabled]="productForm.valid === false">Submit</button>
+  </div>
+</form>
 
-    }
+@for (product of productList; track product) {
+  <div class="product">
+    <div>
+      {{ product.id }}
+    </div>
+    <div>
+      {{ product.name }}
+    </div>
+    <div>
+      {{ product.price }}
+    </div>
+    <div>
+      {{ product.quantity }}
+    </div>
+  </div>
+}

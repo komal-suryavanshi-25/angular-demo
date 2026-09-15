@@ -29,7 +29,12 @@ export class Products {
     return this.products;
 
  } 
+  
+ addProduct(product:any)
+ {
+    this.products.push(product);
 
+ }
 
 
 }
